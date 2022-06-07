@@ -26,15 +26,17 @@ export function UserProvider(props) {
     }
   }
 
-  const userLogedOff = () => {
-    setUser(null)
+  const logOut = () => {
+    setUser(null);
+    setDrone(null);
+    navigate("/");
   }
 
   const value = {
     user,
     drone,
     userSelected,
-    userLogedOff,
+    logOut,
   }
 
   return (

@@ -1,12 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { Header } from '../components/Header'
-import { ChatContext } from '../contexts/ChatContext'
-import { UserContext } from '../contexts/UserContext'
+import React, { useContext, useEffect, useState } from 'react';
+import { Header } from '../components/Header';
+import { ChatContext } from '../contexts/ChatContext';
+import { UserContext } from '../contexts/UserContext';
 
 export function ChatPage() {
-  const userState = useContext(UserContext)
-  const chatState = useContext(ChatContext)
-  const messages = useState([])
+  const userState = useContext(UserContext);
+  const chatState = useContext(ChatContext);
+  const messages = useState([]);
 
   useEffect(() => {
     if (userState) {
@@ -15,7 +15,6 @@ export function ChatPage() {
       room.on('message', (message) => {})
     }
   }, [])
-
 
   return (
     <div>
