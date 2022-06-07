@@ -1,11 +1,9 @@
 import React, { useContext, useState } from 'react'
-import { AppContext } from '../contexts/AppContext';
-import { useNavigate } from "react-router-dom";
+import { UserContext } from '../contexts/UserContext';
 
-export function UserForm(props) {
+export function UserForm() {
   const [state, setState] = useState(null);
-  const navigate = useNavigate();
-  const appState = useContext(AppContext);
+  const userState = useContext(UserContext);
 
   const handleChange = (event) => {
     const value = event.target.value
@@ -17,11 +15,10 @@ export function UserForm(props) {
     }))
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event) => { // Ugradit validaciju kod odabira username-a
     event.preventDefault()
     if (state !== undefined && state !== '') {
-        appState.userSelected(state);
-        navigate("/chat");
+        userState.userSelected(state);
     }
   }
   return (

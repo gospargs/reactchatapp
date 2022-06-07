@@ -1,15 +1,25 @@
-import React, { useContext, useState } from 'react'
-import { AppContext } from '../contexts/AppContext';
+import React, { useContext, useEffect, useState } from 'react'
+import { ChatContext } from '../contexts/ChatContext'
+import { UserContext } from '../contexts/UserContext'
 
 export function ChatPage() {
+  const userState = useContext(UserContext)
+  const chatState = useContext(ChatContext)
+  const messages = useState([])
 
-    const appState = useContext(AppContext);
+  useEffect(() => {
+    if (userState) {
+      // Subscribe after the 'open' or 'authenticate' event from the Scaledrone instance
+      const room = userState.drone.subscribe('observable-room')
+      room.on('message', (message) => {})
+    }
+  }, [])
 
-    console.log(appState.user.username);
-    return (
-            <div>hello  {appState.user.username}</div>
-        );
+  return (
+    <div>
+      <div>
+        <h1>hello {userState.user.username}</h1>
+      </div>
+    </div>
+  )
 }
-
-
-
