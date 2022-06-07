@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Header } from '../components/Header';
+import { Input } from '../components/Input';
+import { Messages } from '../components/Messages';
 import { ChatContext } from '../contexts/ChatContext';
 import { UserContext } from '../contexts/UserContext';
 
@@ -17,10 +19,12 @@ export function ChatPage() {
   }, [])
 
   return (
-    <div>
-      <div>
-        <Header username= {userState.user.username}></Header>
-      </div>
-    </div>
+      <>
+      <Header username={userState.user.username}></Header>
+      <Messages></Messages>
+      <Input></Input>
+      
+      </>
+      
   )
 }

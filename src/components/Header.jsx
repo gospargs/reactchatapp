@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import '../Styles/header.css';
 import { UserContext } from '../contexts/UserContext';
 
@@ -13,7 +13,7 @@ export function Header(props) {
 
     return (
       <div className="header">
-          <h1>My chat {props.username}</h1>
+          <h1>Chat application</h1>
           <button onClick={handleLogOut}> Log out </button>
       </div>
     )
