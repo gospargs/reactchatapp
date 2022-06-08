@@ -1,13 +1,28 @@
-import '../Styles/messages.css';
+import '../Styles/messages.css'
 
-export function Messages() {
+export function Messages(props) {
+  // izlistavamo sve poruke i dodavamo nove
+  const { messages } = props
 
-    // izlistavamo sve poruke i dodavamo nove
-
+  function loadAllMessages(m) {
+    const { user, message, id } = m;
+    const { messageFromMe } = props;
+    const myMessage = user.id === messageFromMe;
+    const className = myMessage
+      ? 'messages-message current-user'
+      : 'messages-message';
 
     return (
-      <div className='messages'>
-          Poruke idu ovdje
-      </div>
+      <li key={id} className={className}>
+        <div className="message-content">
+          <div className="username">{user.username}</div>
+          <div className="text">{message}</div>
+        </div>
+      </li>
     )
   }
+
+  return (
+    <ul className="messages-list">{messages.map((m) => loadAllMessages(m))}</ul>
+  )
+}

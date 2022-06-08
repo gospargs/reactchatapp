@@ -32,7 +32,7 @@ export function UserForm() {
         onChange={handleChange}
       />
       <br />
-      <button type="submit">Start to chat!</button>
+      <button type="submit" disabled={!state} >Start to chat!</button>
     </form>
   )
 }
