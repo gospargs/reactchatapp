@@ -27,8 +27,6 @@ export function UserForm() {
 
   const validateUsername = (username) => {
 
-    var format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-
     if(username === undefined || username === ''){
        setUsernameError('Please enter a username!');
        return false;
@@ -39,7 +37,7 @@ export function UserForm() {
       setUsernameError('Username must be between 4 and 20 characters long!');
       return false;
     }
-    if(format.test(username)){
+    if(username.match(/\W/)){
       setUsernameError('Username cannot contain special characters!');
       return false;
     }
