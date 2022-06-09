@@ -19,6 +19,7 @@
 .user-label{
     text-shadow: 1px 1px 0 var(--accent-color);
     padding-left: 3px;
+    font-size: 18pt;
 }
 .username-input {
     outline: 0;
@@ -29,7 +30,7 @@
     color: var(--font-color);
     font-weight: 500;
     background-color: var(--bg-color);
-
+    font-size: 13pt;
   }
 
 .username-input:focus {
@@ -51,13 +52,14 @@
     cursor: pointer;
     background-color: var(--bg-color);
     margin: auto;
-    margin-top: 10px;
+    margin-top: 20px;
     display: block;
     border-radius: 4rem;
     font-family: var(--font-primary);
     font-style: italic;
     font-weight: 630;
     border: 2px solid var(--accent-color);
+    font-size: 12pt;
   }
 
   .button:hover {

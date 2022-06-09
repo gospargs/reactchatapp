@@ -27,7 +27,7 @@ export function UserForm() {
 
   const validateUsername = (username) => {
 
-    if(username === undefined || username === ''){
+    if(username === undefined || username === '' || username=== null){
        setUsernameError('Please enter a username!');
        return false;
     }else{
@@ -59,7 +59,7 @@ export function UserForm() {
         />
         <br />
         <span className='error-message'>{usernameError}</span>
-        <button className='button' type="submit" disabled={!username}>
+        <button className='button' type="submit">
           Start to chat!
         </button>
       </form>
