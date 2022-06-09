@@ -5,6 +5,7 @@
 .messages-message {
   display: flex;
   margin-top: 10px;
+
 }
 
 .messages-message.current-user {
@@ -46,10 +47,6 @@
 .messages-list {
   background-color: #3a2d80;
   padding: 20px 0;
-  width: 100%;
-  margin: 0 auto;
-  list-style: none;
-  padding-left: 0;
-  flex-grow: 1;
-  overflow: auto;
+  width: 500px;
+
 }

@@ -1,7 +1,7 @@
-import '../Styles/messages.css'
+import '../Styles/messages.css';
+import '../App.css';
 
 export function Messages(props) {
-  // izlistavamo sve poruke i dodavamo nove
   const { messages } = props
 
   function loadAllMessages(m) {
@@ -23,6 +23,6 @@ export function Messages(props) {
   }
 
   return (
-    <ul className="messages-list">{messages.map((m) => loadAllMessages(m))}</ul>
+    <ul className="messages-list chat-window">{messages.map((m) => loadAllMessages(m))}</ul>
   )
 }

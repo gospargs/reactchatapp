@@ -15,7 +15,7 @@ export function Input(props) {
   }
 
   return (
-    <div className="input">
+    <div className="input chat-window">
       {state && <span>{userState.user.username} is typing...</span>}
       <form onSubmit={handleOnSubmit}>
         <input

@@ -5,13 +5,12 @@ import { Messages } from '../components/Messages';
 import { UserContext } from '../contexts/UserContext';
 
 export function ChatPage() {
-  const { user, drone, logOut } = useContext(UserContext)
+  const { user, drone, logOut } = useContext(UserContext);
 
-  const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState([]);
 
   useEffect(() => {
     if (user) {
-      // Subscribe after the 'open' or 'authenticate' event from the Scaledrone instance
       const room = drone.subscribe('observable-room')
       room.on('message', (message) => {
         setMessages((current) => {
