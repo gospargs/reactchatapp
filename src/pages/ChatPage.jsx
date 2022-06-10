@@ -1,13 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Header } from '../components/Header';
-import { Input } from '../components/Input';
-import { Messages } from '../components/Messages';
-import { UserContext } from '../contexts/UserContext';
+import React, { useContext, useEffect, useState } from 'react'
+import { Header } from '../components/Header'
+import { Input } from '../components/Input'
+import { Messages } from '../components/Messages'
+import { UserContext } from '../contexts/UserContext'
 
 export function ChatPage() {
-  const { user, drone, logOut } = useContext(UserContext);
-
-  const [messages, setMessages] = useState([]);
+  const { user, drone, logOut } = useContext(UserContext)
+  const [messages, setMessages] = useState([])
 
   useEffect(() => {
     if (user) {

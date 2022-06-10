@@ -4,7 +4,7 @@ import '../App.css';
 export function Messages(props) {
   const { messages } = props
 
-  function loadAllMessages(m) {
+  const loadAllMessages = (m) => {
     const { user, message, id } = m;
     const { messageFromMe } = props;
     const myMessage = user.id === messageFromMe;

@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const UserContext = React.createContext()
 export const UserConsumer = UserContext.Consumer
 
 export function UserProvider(props) {
-  const navigate = useNavigate();
-  const [user, setUser] = useState(null);
-  const [drone, setDrone] = useState(null);
+  const navigate = useNavigate()
+  const [user, setUser] = useState(null)
+  const [drone, setDrone] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
 
   const userSelected = (data) => {
     if (data) {
+      setIsLoading(true)
       const drone = new window.Scaledrone('buj5SNMKOccNFyFR', {
         data: data.username,
       })
@@ -18,10 +20,9 @@ export function UserProvider(props) {
         if (error) {
           return console.error(error)
         }
-        setDrone(drone);
-        setUser({ id: drone.clientId, username: data.username });
-
-        navigate('/chat');
+        setDrone(drone)
+        setUser({ id: drone.clientId, username: data.username })
+        setIsLoading(false)
       })
     }
   }
@@ -36,6 +37,7 @@ export function UserProvider(props) {
   const value = {
     user,
     drone,
+    isLoading,
     userSelected,
     logOut,
   }
