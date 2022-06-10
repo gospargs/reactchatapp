@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+
 
 export const UserContext = React.createContext()
 export const UserConsumer = UserContext.Consumer
 
 export function UserProvider(props) {
-  const navigate = useNavigate()
   const [user, setUser] = useState(null)
   const [drone, setDrone] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
@@ -31,7 +30,6 @@ export function UserProvider(props) {
     setUser(null)
     drone.close()
     setDrone(null)
-    navigate('/')
   }
 
   const value = {

@@ -3,10 +3,13 @@ import { Header } from '../components/Header'
 import { Input } from '../components/Input'
 import { Messages } from '../components/Messages'
 import { UserContext } from '../contexts/UserContext'
+import { useNavigate } from 'react-router-dom'
 
 export function ChatPage() {
   const { user, drone, logOut } = useContext(UserContext)
   const [messages, setMessages] = useState([])
+  const [userIsLoggingOut, setUserIsLoggingOut] = useState(false)
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (user) {
@@ -29,6 +32,13 @@ export function ChatPage() {
     }
   }, [user, drone])
 
+  useEffect(() => {
+    if (userIsLoggingOut) {
+      logOut()
+      navigate('/')
+    }
+  })
+
   const onSendMessage = (message) =>
     drone.publish({
       room: 'observable-room',
@@ -37,7 +47,7 @@ export function ChatPage() {
 
   return (
     <>
-      <Header username={user.username} logOut={logOut}></Header>
+      <Header username={user.username} setUserIsLoggingOut={setUserIsLoggingOut}></Header>
       <Messages messages={messages} messageFromMe={user.id}></Messages>
       <Input onSendMessage={onSendMessage}></Input>
     </>
