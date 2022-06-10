@@ -8,14 +8,6 @@
     color: var(--font-color);
 }
 
-.wrapper-form {
-    padding-top: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px;
-    padding-left: 40px;
-    border-radius: 4px;
-}
-
 .user-label{
     text-shadow: 1px 1px 0 var(--accent-color);
     padding-left: 3px;

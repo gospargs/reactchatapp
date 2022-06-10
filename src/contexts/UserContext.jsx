@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-
 export const UserContext = React.createContext()
 export const UserConsumer = UserContext.Consumer
 

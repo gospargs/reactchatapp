@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react'
 import { UserContext } from '../contexts/UserContext'
 import '../Styles/input.css'
+
 export function Input(props) {
   const userState = useContext(UserContext)
   const [state, setState] = useState('')
@@ -15,16 +16,16 @@ export function Input(props) {
   }
 
   return (
-    <div className="input chat-window">
-      {state && <span>{userState.user.username} is typing...</span>}
-      <form onSubmit={handleOnSubmit}>
-        <input
+    <div className="input">
+      <form onSubmit={handleOnSubmit} className='form-align'>
+        <textarea
+          className='message-input'
           type="text"
           onChange={handleOnChange}
           value={state}
           placeholder="Type your message!"
         />
-        <button type="submit" disabled={!state}>
+        <button className='send-message-btn' type="submit">
           Send
         </button>
       </form>

@@ -1,4 +1,5 @@
 import '../Styles/header.css';
+import { RiLogoutCircleRLine } from 'react-icons/ri';
 
 export function Header(props) {
 
@@ -7,9 +8,10 @@ export function Header(props) {
   }
 
   return (
-    <div className="header chat-window">
-      <h1>Chat application</h1>
-      <button onClick={handleOnSubmit}> Log out </button>
+    <div className="header">
+      <div className='header-components'>
+        <span className='log-out-icon' onClick={handleOnSubmit} ><RiLogoutCircleRLine /></span>
+      </div>
     </div>
   )
 }

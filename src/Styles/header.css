@@ -1,5 +1,47 @@
 .header{
     text-align: center;
-    background-color: red;
+    background-color: var(--accent-color);
     max-width: 500px;
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0;
+    flex-grow: 1;
+    overflow: auto; 
+    height: 70px;
+    font-family: var(--font-primary);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;   
+}
+.log-out-btn {
+    color: var(--font-color);
+    padding: 0.6rem 0.5rem;
+    text-align: center;
+    display: inline-block;
+    font-size: 10pt;
+    cursor: pointer;
+    background-color: var(--bg-color);
+    margin: auto;
+    display: block;
+    border-radius: 4rem;
+    font-family: var(--font-primary);
+    font-style: italic;
+    font-weight: 630;
+    border: 2px solid var(--accent-color);
+    font-size: 9pt;
+}
+.header-components{
+    float: right;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.username-display{
+    color: var(--font-color);
+    margin-right: 15px;
+}
+
+.log-out-icon{
+    color: var(--font-color);
+    font-size: 20pt;
+    cursor: pointer;
+
 }

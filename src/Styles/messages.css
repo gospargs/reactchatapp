@@ -1,7 +1,4 @@
-.messages {
-  background-color: green;
-  height: 600px;
-}
+
 .messages-message {
   display: flex;
   margin-top: 10px;
@@ -44,9 +41,14 @@
 .current-member > .message-content .text {
   background-color: #3a2d80;
 }
-.messages-list {
-  background-color: #3a2d80;
-  padding: 20px 0;
-  width: 500px;
 
+.messages-list {
+  background-color: #7e7e83;
+  padding: 20px 0;
+  max-width: 500px;
+  overflow: auto;
+  text-align: center;
+  margin: 0 auto;
+  height: 250px;
+  word-wrap: break-word;
 }

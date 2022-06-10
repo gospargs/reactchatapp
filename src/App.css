@@ -12,12 +12,24 @@
 body{
     background-color: var(--bg-color);
 }
-.chat-window{
-    margin: 0 auto;
-    list-style: none;
-    padding-left: 0;
-    flex-grow: 1;
-    overflow: auto;
+.chat-app{
+    margin-top: 200px;
 }
-
+::-webkit-scrollbar {
+    width: 7px;
+  }
   
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #950740;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

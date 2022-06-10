@@ -23,6 +23,6 @@ export function Messages(props) {
   }
 
   return (
-    <ul className="messages-list chat-window">{messages.map((m) => loadAllMessages(m))}</ul>
+    <ul className="messages-list">{messages.map((m) => loadAllMessages(m))}</ul>
   )
 }
