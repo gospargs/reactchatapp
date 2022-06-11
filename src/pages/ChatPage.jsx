@@ -47,7 +47,7 @@ export function ChatPage() {
         setMembers({ ...members });
       });
     }
-  }, [user, drone])
+  }, [user, drone,members])
 
   useEffect(() => {
     if (userIsLoggingOut) {
