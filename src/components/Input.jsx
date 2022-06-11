@@ -10,14 +10,14 @@ export function Input(props) {
     props.onSendMessage(state)
     setState('')
     event.preventDefault()
-  }
+}
   const handleOnChange = (event) => {
     setState(event.target.value)
   }
 
   return (
     <div className="input">
-      <form onSubmit={handleOnSubmit} className='form-align'>
+      <form onSubmit={handleOnSubmit} className='form-align' method='post'>
         <textarea
           className='message-input'
           type="text"
@@ -25,7 +25,7 @@ export function Input(props) {
           value={state}
           placeholder="Type your message!"
         />
-        <button className='send-message-btn' type="submit">
+        <button className='send-message-btn' type="submit" disabled = {!state}>
           Send
         </button>
       </form>

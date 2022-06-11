@@ -1,54 +1,72 @@
 
-.messages-message {
+.current-user {
   display: flex;
   margin-top: 10px;
-
-}
-
-.messages-message.current-user {
   flex-direction: row-reverse;
   text-align: right;
 }
+
+.other-user{
+  display: flex;
+  text-align: left;
+  margin-top: 10px;
+  }
 
 .message-content {
   display: inline-block;
 }
 
-.current-member > .Message-content {
-  align-items: flex-end;
-}
-
-.message-content > .username {
+.my-chat-settings > .username {
   display: block;
-  color: #d6e757;
+  color: var(--bg-color);
   font-size: 14px;
   padding-bottom: 4px;
   font-weight: bold;
+  font-family: var(--font-primary);
 }
 
-.message-content > .text {
+.my-chat-settings > .text {
   padding: 10px;
   max-width: 400px;
   margin: 0;
   border-radius: 12px;
-  background-color: rgb(30, 202, 14);
+  background-color: var(--accent-color);
   color: white;
   display: inline-block;
   font-size: 13px;
   text-align: left;
+  font-family: var(--font-primary);
+} 
+
+.other-chat-settings > .username {
+  display: block;
+  color: var(--bg-color);
+  font-size: 14px;
+  padding-bottom: 4px;
+  font-weight: bold;
+  font-family: var(--font-primary);
 }
 
-.current-member > .message-content .text {
-  background-color: #3a2d80;
+.other-chat-settings > .text {
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 12px;
+  background-color: rgb(239, 239, 239);
+  color: var(--bg-color);
+  display: inline-block;
+  font-size: 13px;
+  text-align: left;
+  font-family: var(--font-primary);
 }
 
 .messages-list {
   background-color: #7e7e83;
-  padding: 15px 15px 15px 15px;
+  padding: 15px 15px 0px 15px;
   max-width: 470px;
-  width: 100%;
   flex-grow: 1;
   margin: 0 auto;
   height: 250px;
   word-wrap: break-word;
+  overflow: auto;
 }
