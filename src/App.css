@@ -16,6 +16,9 @@ body{
     display: flex;
     flex-direction: column;
     height: 100vh;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
 }
 ::-webkit-scrollbar {
     width: 7px;
