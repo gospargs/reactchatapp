@@ -13,6 +13,12 @@ export function Input(props) {
 }
   const handleOnChange = (event) => {
     setState(event.target.value)
+    if(event.target.value !== ''){
+      userState.showWhoIstyping(userState.user.username);
+    }else {
+      userState.showWhoIstyping('');
+    }
+   
   }
 
   return (

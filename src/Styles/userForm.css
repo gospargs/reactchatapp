@@ -31,7 +31,7 @@
 }
 
 [placeholder]:focus::-webkit-input-placeholder {
-    transition: text-indent 0.9s 0.9s ease; 
+    transition: text-indent 0.9s 0.4s ease; 
     text-indent: -100%;
     opacity: 1;
  }

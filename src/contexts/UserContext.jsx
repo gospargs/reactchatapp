@@ -7,6 +7,11 @@ export function UserProvider(props) {
   const [user, setUser] = useState(null)
   const [drone, setDrone] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
+  const [userTyping, setUserTyping] = useState('')
+
+  const showWhoIstyping = (typer) => {
+    setUserTyping(typer)
+  }
 
   const userSelected = (data) => {
     if (data) {
@@ -35,8 +40,10 @@ export function UserProvider(props) {
     user,
     drone,
     isLoading,
+    userTyping,
     userSelected,
     logOut,
+    showWhoIstyping
   }
 
   return (

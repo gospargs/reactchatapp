@@ -66,7 +66,7 @@ export function ChatPage() {
     <div className='chat-app'>
       <Header username={user.username} setUserIsLoggingOut={setUserIsLoggingOut} member = {members}></Header>
       <Messages messages={messages} messageFromMe={user.id}></Messages>
-      <Input onSendMessage={onSendMessage}></Input>
+      <Input onSendMessage={onSendMessage} ></Input>
     </div>
   )
 }
