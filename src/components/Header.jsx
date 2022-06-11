@@ -9,9 +9,7 @@ export function Header(props) {
 
   return (
     <div className="header">
-      <div className='header-components'>
-        <span className='log-out-icon' onClick={handleOnSubmit} ><RiLogoutCircleRLine /></span>
-      </div>
+        <div className='log-out-icon' onClick={handleOnSubmit} ><RiLogoutCircleRLine /></div>
     </div>
   )
 }
