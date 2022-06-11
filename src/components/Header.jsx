@@ -10,6 +10,7 @@ export function Header(props) {
 
   const handleOnSubmit = () => {
     props.setUserIsLoggingOut(true)
+    userState.userTyping('')
   }
 
   return (
