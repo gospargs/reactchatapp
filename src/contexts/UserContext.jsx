@@ -28,7 +28,6 @@ export function UserProvider(props) {
   const logOut = () => {
     setUser(null)
     drone.close()
-    drone.unsubscribe('observable-room');
     setDrone(null)
   }
 
