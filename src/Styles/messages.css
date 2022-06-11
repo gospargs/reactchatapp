@@ -44,10 +44,10 @@
 
 .messages-list {
   background-color: #7e7e83;
-  padding: 20px 0;
-  max-width: 500px;
-  overflow: auto;
-  text-align: center;
+  padding: 15px 15px 15px 15px;
+  max-width: 470px;
+  width: 100%;
+  flex-grow: 1;
   margin: 0 auto;
   height: 250px;
   word-wrap: break-word;

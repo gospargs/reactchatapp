@@ -1,16 +1,14 @@
 .header{
-    text-align: center;
-    background-color: var(--accent-color);
-    max-width: 500px;
-    margin: 0 auto;
-    list-style: none;
-    padding-left: 0;
-    flex-grow: 1;
-    overflow: auto; 
-    height: 70px;
-    font-family: var(--font-primary);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;   
+        text-align: center;
+        background-color: var(--accent-color);
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        height: 70px;
+        font-family: var(--font-primary);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-top: 20px;  
 }
 .log-out-btn {
     color: var(--font-color);

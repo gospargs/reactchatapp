@@ -16,6 +16,10 @@ export function UserForm() {
       ...username,
       [name]: value,
     }))
+
+    if(value === ''){
+      setUsernameError('');
+    }
   }
 
   const handleSubmit = (event) => {
@@ -26,7 +30,7 @@ export function UserForm() {
   }
 
   const validateUsername = (username) => {
-    if (username === undefined || username === '' || username === null) {
+    if (username === undefined || username === null || username.username.toString() === '') {
       setUsernameError('Please enter a username!')
       return false
     } else {

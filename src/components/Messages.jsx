@@ -23,6 +23,8 @@ export function Messages(props) {
   }
 
   return (
-    <ul className="messages-list">{messages.map((m) => loadAllMessages(m))}</ul>
+    <div>
+      <ul className="messages-list">{messages.map((m) => loadAllMessages(m))}</ul>
+    </div>
   )
 }
