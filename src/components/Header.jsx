@@ -1,16 +1,14 @@
 import '../Styles/header.css'
 import { RiLogoutCircleRLine } from 'react-icons/ri'
 import ReactTooltip from 'react-tooltip'
-import { useState,useContext } from 'react'
-import { UserContext } from '../contexts/UserContext'
+import { useState } from 'react'
+
 
 export function Header(props) {
   const [tooltip, showTooltip] = useState(true)
-  const userState = useContext(UserContext)
 
   const handleOnSubmit = () => {
     props.setUserIsLoggingOut(true)
-    userState.userTyping('')
   }
 
   return (
@@ -28,7 +26,6 @@ export function Header(props) {
       >
         <RiLogoutCircleRLine />
       </div>
-      {userState.userTyping && <div>{userState.userTyping} is typing...</div>}
     </div>
   )
 }

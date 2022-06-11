@@ -1,9 +1,8 @@
-import { useContext, useState } from 'react'
-import { UserContext } from '../contexts/UserContext'
+import { useState } from 'react'
 import '../Styles/input.css'
 
 export function Input(props) {
-  const userState = useContext(UserContext)
+
   const [state, setState] = useState('')
 
   const handleOnSubmit = (event) => {
@@ -13,17 +12,12 @@ export function Input(props) {
 }
   const handleOnChange = (event) => {
     setState(event.target.value)
-    if(event.target.value !== ''){
-      userState.showWhoIstyping(userState.user.username);
-    }else {
-      userState.showWhoIstyping('');
-    }
    
   }
 
   return (
     <div className="input">
-      <form onSubmit={handleOnSubmit} className='form-align' method='post'>
+      <form onSubmit={handleOnSubmit} className='form-align'>
         <textarea
           className='message-input'
           type="text"
