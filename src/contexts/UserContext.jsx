@@ -8,18 +8,18 @@ export function UserProvider(props) {
   const [drone, setDrone] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
 
-  const userSelected = (data) => {
-    if (data) {
+  const userSelected = (username,userAvatarColor) => {
+    if (username) {
       setIsLoading(true)
       const drone = new window.Scaledrone('buj5SNMKOccNFyFR', {
-        data: data.username,
+        data: username.username,
       })
       drone.on('open', (error) => {
         if (error) {
           return console.error(error)
         }
         setDrone(drone)
-        setUser({ id: drone.clientId, username: data.username })
+        setUser({ id: drone.clientId, username: username.username, avatarColor: userAvatarColor})
         setIsLoading(false)
       })
     }

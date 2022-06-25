@@ -10,7 +10,7 @@ export function UserForm() {
 
   const [username, setUsername] = useState(null)
   const [userAvatarColor, setuserAvatarColor] = useState(
-    generateRandomAvatarColor(),
+    generateRandomAvatarColor,
   )
   const userState = useContext(UserContext)
   const [usernameError, setUsernameError] = useState('')
@@ -31,20 +31,13 @@ export function UserForm() {
 
   const handleUserAvatarColorChange = (event) => {
     const value = event.target.value
-    const name = event.target.name
-
-    if (value !== '#000000') {
-      setuserAvatarColor((userAvatarColor) => ({
-        ...userAvatarColor,
-        [name]: value,
-      }))
-    }
+    setuserAvatarColor(value)
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
     if (validateUsername(username)) {
-      userState.userSelected(username)
+      userState.userSelected(username, userAvatarColor)
     }
   }
 
@@ -84,17 +77,22 @@ export function UserForm() {
             onChange={handleChange}
           />
           <br />
-
-          <input
-            type="color"
-            id="color"
-            name="color"
-            value={userAvatarColor}
-            onChange={handleUserAvatarColorChange}
-          />
-          <label>Avatar color</label>
-
           <span className="error-message">{usernameError}</span>
+          <br />
+          <div>
+            <div className='avatar-label'>
+              <label>Avatar color</label>
+            </div>
+            <div>
+              <input
+                type="color"
+                id="color"
+                name="color"
+                value={userAvatarColor}
+                onChange={handleUserAvatarColorChange}
+              />
+            </div>
+          </div>
           <button className="button" type="submit">
             Start to chat!
           </button>

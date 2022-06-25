@@ -27,7 +27,7 @@ export function Messages(props) {
       <li key={id} className={className}>
             <span
               className="avatar"
-              style={{backgroundColor: '#555'}}
+              style={{backgroundColor: user.avatarColor}}
             />
         <div className={classNameChat}>
           <div className="username">{user.username}</div>

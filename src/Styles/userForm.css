@@ -1,68 +1,88 @@
-.user-select-Form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
-    font-family: var(--font-primary);
-    color: var(--font-color);
+.user-select-Form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  font-family: var(--font-primary);
+  color: var(--font-color);
 }
 
-.user-label{
-    text-shadow: 1px 1px 0 var(--accent-color);
-    padding-left: 3px;
-    font-size: 18pt;
+.user-label {
+  text-shadow: 1px 1px 0 var(--accent-color);
+  padding-left: 3px;
+  font-size: 18pt;
 }
 .username-input {
-    outline: 0;
-    border-width: 0 0 2px;
-    border-color: var(--accent-color);
-    font-family: var(--font-primary);
-    margin-top: 20px;
-    color: var(--font-color);
-    font-weight: 500;
-    background-color: var(--bg-color);
-    font-size: 13pt;
-  }
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: var(--accent-color);
+  font-family: var(--font-primary);
+  margin-top: 20px;
+  color: var(--font-color);
+  font-weight: 500;
+  background-color: var(--bg-color);
+  font-size: 13pt;
+}
 
 .username-input:focus {
-    border-color: var(--border-color);
-    background-color: var(--bg-color);
+  border-color: var(--border-color);
+  background-color: var(--bg-color);
 }
 
 [placeholder]:focus::-webkit-input-placeholder {
-    transition: text-indent 0.9s 0.4s ease; 
-    text-indent: -100%;
-    opacity: 1;
- }
-  .button {
-    color: var(--font-color);
-    padding: 0.5rem 1rem;
-    text-align: center;
-    display: inline-block;
-    font-size: 10pt;
-    cursor: pointer;
-    background-color: var(--bg-color);
-    margin: auto;
-    margin-top: 20px;
-    display: block;
-    border-radius: 4rem;
-    font-family: var(--font-primary);
-    font-style: italic;
-    font-weight: 630;
-    border: 2px solid var(--accent-color);
-    font-size: 12pt;
-  }
+  transition: text-indent 0.9s 0.4s ease;
+  text-indent: -100%;
+  opacity: 1;
+}
+.button {
+  color: var(--font-color);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 10pt;
+  cursor: pointer;
+  background-color: var(--bg-color);
+  margin: auto;
+  margin-top: 20px;
+  display: block;
+  border-radius: 4rem;
+  font-family: var(--font-primary);
+  font-style: italic;
+  font-weight: 630;
+  border: 2px solid var(--accent-color);
+  font-size: 12pt;
+}
 
-  .button:hover {
-    box-shadow: none;
-    background-color: var(--bg-colorv2);
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
+.button:hover {
+  box-shadow: none;
+  background-color: var(--bg-colorv2);
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
 
-  }
+.error-message {
+  font-size: 8pt;
+  color: var(--font-color);
+}
 
-  .error-message {
-    font-size: 8pt;
-    color: var(--font-color);
+input[type="color"] {
+	width: 40px;
+	height: 40px;
+	border: none;
+	border-radius: 40px;
+	background: none;
+  
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: solid 2px var(--accent-color); 
+	border-radius: 40px;
+}
+.avatar-label{
+  margin-bottom: 5px;
 }

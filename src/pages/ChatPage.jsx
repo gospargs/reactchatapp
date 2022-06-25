@@ -25,6 +25,7 @@ export function ChatPage() {
               user: {
                 id: message.member.id,
                 username: message.member.clientData,
+                avatarColor: user.avatarColor,
               },
             },
           ]
