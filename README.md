@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Assignment
+
+The Assignment is to create a web chat application.
+
+Functional specification
+
+It is necessary to create a functional user interface for chat participants.
+
+The chat application should:
+- be able to create and send new text messages 
+- be able to display it on the screen next to the author's name
+- for each participant in the chat, select a random color and / or name that identifies them
+- connect to the Scaledrone service (additional service instructions attached) and successfully
+simulate the conversation of all active users
+- be available through a public GitHub account
