@@ -37,6 +37,7 @@
   text-align: left;
   font-family: var(--font-primary);
   opacity: 0.8;
+  white-space: pre-line;
 } 
 
 .avatar {

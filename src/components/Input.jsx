@@ -6,9 +6,11 @@ export function Input(props) {
   const [state, setState] = useState('')
   const handleOnSubmit = (event) => {
 
-    props.onSendMessage(state);
-    setState('')
-    event.preventDefault()
+    if(state !== '' && state !==undefined && state !== '\n'){
+      props.onSendMessage(state);
+      setState('')
+      event.preventDefault()
+    }
 }
   const handleOnChange = (event) => {
     setState(event.target.value)
