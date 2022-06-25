@@ -37,7 +37,7 @@ export function UserForm() {
   const handleSubmit = (event) => {
     event.preventDefault()
     if (validateUsername(username)) {
-      userState.userSelected(username, userAvatarColor)
+      userState.userSelected(username.username, userAvatarColor)
     }
   }
 
