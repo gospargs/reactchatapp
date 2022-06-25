@@ -25,6 +25,10 @@ export function Messages(props) {
 
     return (
       <li key={id} className={className}>
+            <span
+              className="avatar"
+              style={{backgroundColor: '#555'}}
+            />
         <div className={classNameChat}>
           <div className="username">{user.username}</div>
           <div className="text">{message}</div>

@@ -4,7 +4,14 @@ import '../Styles/userForm.css'
 import { LoadingSpinner } from './LoadingSpinner'
 
 export function UserForm() {
+  const generateRandomAvatarColor = () => {
+    return '#' + Math.floor(Math.random() * 0xffffff).toString(16)
+  }
+
   const [username, setUsername] = useState(null)
+  const [userAvatarColor, setuserAvatarColor] = useState(
+    generateRandomAvatarColor(),
+  )
   const userState = useContext(UserContext)
   const [usernameError, setUsernameError] = useState('')
 
@@ -17,8 +24,20 @@ export function UserForm() {
       [name]: value,
     }))
 
-    if(value === ''){
-      setUsernameError('');
+    if (value === '') {
+      setUsernameError('')
+    }
+  }
+
+  const handleUserAvatarColorChange = (event) => {
+    const value = event.target.value
+    const name = event.target.name
+
+    if (value !== '#000000') {
+      setuserAvatarColor((userAvatarColor) => ({
+        ...userAvatarColor,
+        [name]: value,
+      }))
     }
   }
 
@@ -30,7 +49,11 @@ export function UserForm() {
   }
 
   const validateUsername = (username) => {
-    if (username === undefined || username === null || username.username.toString() === '') {
+    if (
+      username === undefined ||
+      username === null ||
+      username.username.toString() === ''
+    ) {
       setUsernameError('Please enter a username!')
       return false
     } else {
@@ -61,18 +84,24 @@ export function UserForm() {
             onChange={handleChange}
           />
           <br />
+
+          <input
+            type="color"
+            id="color"
+            name="color"
+            value={userAvatarColor}
+            onChange={handleUserAvatarColorChange}
+          />
+          <label>Avatar color</label>
+
           <span className="error-message">{usernameError}</span>
           <button className="button" type="submit">
             Start to chat!
           </button>
         </form>
       </div>
-    );
+    )
   }
 
-  return (
-    <div>
-      {userState.isLoading ? <LoadingSpinner /> : loadUserForm()}
-    </div>
-  )
+  return <div>{userState.isLoading ? <LoadingSpinner /> : loadUserForm()}</div>
 }

@@ -27,7 +27,7 @@
 
 .send-message-btn {
     color: var(--font-color);
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     text-align: center;
     display: inline-block;
     cursor: pointer;
