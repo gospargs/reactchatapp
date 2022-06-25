@@ -19,6 +19,7 @@
     font-size: 10pt;
     resize: none;
     margin: 0 auto;
+    outline: none;
 }
 .message-input::-webkit-input-placeholder {
     padding-top: 4px;

@@ -4,9 +4,9 @@ import '../Styles/input.css'
 export function Input(props) {
 
   const [state, setState] = useState('')
-
   const handleOnSubmit = (event) => {
-    props.onSendMessage(state)
+
+    props.onSendMessage(state);
     setState('')
     event.preventDefault()
 }
@@ -15,9 +15,14 @@ export function Input(props) {
    
   }
 
+  function handleKeyUp(event) {
+    if (event.keyCode === 13 && !event.shiftKey) {
+      handleOnSubmit(event);
+    }
+  }
   return (
     <div className="input">
-      <form onSubmit={handleOnSubmit} className='form-align'>
+      <form onKeyUp={handleKeyUp} onSubmit={handleOnSubmit} className='form-align'>
         <textarea
           className='message-input'
           type="text"
